@@ -1,0 +1,18 @@
+syntax = "proto3";
+option java_package = "jp.boctok.kotlingrpc.users.proto";
+option java_outer_classname = "GreeterProtobuf";
+
+service Users {
+    rpc UserInfo (UsersRequest) returns (UsersResponse);
+}
+
+message UsersRequest {
+    int32 id = 0;
+    string name = 1;
+    timestamp
+}
+
+message HelloResponse {
+    string message = 1;
+    int32 nameLength = 2;
+}
